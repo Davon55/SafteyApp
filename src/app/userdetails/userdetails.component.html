@@ -1,0 +1,27 @@
+<div class="userdetails" *ngIf="user">
+    <h2>{{user.FirstName}} {{user.LastName}} Details</h2>
+    <div><span>id:</span>{{user.Id}}</div>
+    <div>
+        <label for="username">UserName:</label>
+        {{user.UserName}}
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        {{user.Password}}
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        {{user.Email}}
+    </div>
+    <div>
+        <label for="phonenumber">PhoneNumber:</label>
+        {{user.PhoneNumber}}
+    </div>
+ <button type="button" (click)="editUser(user)">Edit</button>
+</div>
+
+
+<app-edituser [editUser]="onEditUser"></app-edituser>
+
+
+

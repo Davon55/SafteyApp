@@ -1,0 +1,36 @@
+<form *ngIf="editUser">
+<div>
+    <div>
+        <label for="firstName">FirstName:</label>
+        <input id="firstName" [(ngModel)]="user.FirstName" name="FirstName" placeholder="Enter Firstname">
+        {{user.FirstName}}
+    </div>
+    <div>
+        <label for="lastname">LastName:</label>
+        <input id="lastname" [(ngModel)]="user.LastName"  name="FirstName" placeholder="Enter Lastname">
+        {{user.LastName}}
+    </div>
+    <div>
+        <label for="username">UserName:</label>
+        <input id="username" [(ngModel)]="user.UserName" name="FirstName" placeholder="Enter Username">
+        {{user.UserName}}
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input id="password" [(ngModel)]="user.Password" name="FirstName" placeholder="Enter a Password">
+        {{user.Password}}
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input id="email" [(ngModel)]="user.Email" name="FirstName" placeholder="Enter a Email">
+        {{user.Email}}
+    </div>
+    <div>
+        <label for="phonenumber">PhoneNumber:</label>
+        <input id="phonenumber" [(ngModel)]="user.PhoneNumber" name="FirstName" placeholder="Enter a Phonenumber">
+        {{user.PhoneNumber}}
+    </div>
+</div>
+<button type="button" (click)="save()">save</button>
+
+</form>

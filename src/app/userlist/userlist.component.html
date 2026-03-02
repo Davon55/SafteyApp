@@ -1,0 +1,11 @@
+<div class="list-group" style="text-align: center;">
+   <ul *ngFor="let user of users">
+        <button type="button" (click)="onSelectedUser(user)">
+            <span class="user">{{user.FirstName}} {{user.LastName}}</span>          
+        </button>
+   </ul>
+</div>
+
+<div *ngIf="onSelectedUser">
+    <app-userdetails [user]="selectedUser"></app-userdetails>
+</div>

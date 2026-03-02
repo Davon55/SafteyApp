@@ -1,0 +1,30 @@
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+    <li ngbNavItem>
+      <button ngbNavLink>About</button>
+      <ng-template ngbNavContent class="background">
+        <div style="text-align: center;">
+        <p> Welcome to the Pool Saftey Website where you can monitor your pool, get alerts and many more goodies</p>
+                <img src="assets/images/background.jpg"><br>
+            </div>
+           
+      </ng-template>
+    </li>
+    <li ngbNavItem>
+      <button ngbNavLink>LogIn</button>
+      <ng-template ngbNavContent>
+        <div style="text-align: center;">
+        <p >Please Login</p>
+        <a routerLink="/login">Login Here</a>
+       </div>
+      </ng-template>
+    </li>
+    <li ngbNavItem>
+        <button ngbNavLink>Register</button>
+        <ng-template ngbNavContent>Second content</ng-template>
+      </li>
+      <li ngbNavItem>
+        <button ngbNavLink>Home</button>
+        <ng-template ngbNavContent><app-homepage></app-homepage></ng-template>
+      </li>
+  </ul>
+  <div [ngbNavOutlet]="nav"></div>
